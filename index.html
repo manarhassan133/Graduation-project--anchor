@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>الأخبار - الصفحة الرئيسية</title>
+    <meta name="description" content="بوابة أخبار اقتصادية عربية - نموذج واجهة أمامية" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e00034'/%3E%3Ctext x='50' y='60' font-size='56' text-anchor='middle' fill='white'%3Eأ%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="topbar container">
+        <div class="topbar__left">
+          <button class="icon-btn" id="openMenu" aria-label="فتح القائمة">
+            <span class="icon">☰</span>
+          </button>
+          <a class="logo" href="#" aria-label="الرئيسية">الأعمال</a>
+        </div>
+        <div class="topbar__center">
+          <nav class="nav" aria-label="التصنيفات الرئيسية">
+            <a href="#" class="nav__link is-active">مصر</a>
+            <a href="#" class="nav__link">الأسواق</a>
+            <a href="#" class="nav__link">اقتصاد</a>
+            <a href="#" class="nav__link">شركات</a>
+            <a href="#" class="nav__link">طاقة</a>
+            <a href="#" class="nav__link">تكنولوجيا</a>
+            <a href="#" class="nav__link">رأي</a>
+          </nav>
+        </div>
+        <div class="topbar__right">
+          <button class="btn btn--sm btn--primary" id="subscribeBtn">اشترك الآن</button>
+          <button class="icon-btn" id="openSearch" aria-label="بحث"><span class="icon">🔍</span></button>
+        </div>
+      </div>
+      <div class="subbar">
+        <div class="container subbar__inner">
+          <div class="ticker" aria-label="مؤشرات الأسواق">
+            <div class="ticker__item up">EGX30 0.85% ▲</div>
+            <div class="ticker__item down">Brent -0.42% ▼</div>
+            <div class="ticker__item up">USD/EGP 0.03% ▲</div>
+            <div class="ticker__item steady">Gold 0.00% •</div>
+          </div>
+          <div class="datetime" id="datetime"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breaking news -->
+    <div class="breaking">
+      <div class="container breaking__inner">
+        <strong class="breaking__label">عاجل</strong>
+        <div class="breaking__marquee" id="breakingMarquee" aria-live="polite">
+          الحكومة تعلن حزمة إجراءات لدعم الاستثمارات الأجنبية المباشرة.
+          — البنك المركزي يُبقي على أسعار الفائدة دون تغيير في اجتماعه الأخير.
+          — ارتفاع ملحوظ في صادرات الصناعات الكيماوية خلال الربع الثاني.
+        </div>
+      </div>
+    </div>
+
+    <main class="page">
+      <!-- Hero section -->
+      <section class="hero container">
+        <article class="hero__main card card--overlay">
+          <a href="#" class="card__media">
+            <img src="https://picsum.photos/seed/hero1/1200/700" alt="صورة خبر رئيسي" loading="eager">
+          </a>
+          <div class="card__overlay">
+            <a class="chip" href="#">اقتصاد</a>
+            <h1 class="card__title"><a href="#">إصلاحات هيكلية جديدة لتعزيز تنافسية الاقتصاد المصري</a></h1>
+            <p class="card__excerpt">حزمة تغييرات تستهدف تحسين بيئة الأعمال وزيادة الإنتاجية، مع خارطة تنفيذ زمنية واضحة.</p>
+          </div>
+        </article>
+        <aside class="hero__side">
+          <article class="mini card card--overlay">
+            <a href="#" class="card__media">
+              <img src="https://picsum.photos/seed/hero2/600/400" alt="عنوان جانبي 1" loading="lazy">
+            </a>
+            <div class="card__overlay">
+              <a class="chip" href="#">شركات</a>
+              <h3 class="card__title"><a href="#">طرح عام مرتقب لواحدة من كبرى الشركات الحكومية</a></h3>
+            </div>
+          </article>
+          <article class="mini card card--overlay">
+            <a href="#" class="card__media">
+              <img src="https://picsum.photos/seed/hero3/600/400" alt="عنوان جانبي 2" loading="lazy">
+            </a>
+            <div class="card__overlay">
+              <a class="chip" href="#">طاقة</a>
+              <h3 class="card__title"><a href="#">زيادة استثمارات الطاقة المتجددة خلال العام الجاري</a></h3>
+            </div>
+          </article>
+          <article class="mini card card--overlay">
+            <a href="#" class="card__media">
+              <img src="https://picsum.photos/seed/hero4/600/400" alt="عنوان جانبي 3" loading="lazy">
+            </a>
+            <div class="card__overlay">
+              <a class="chip" href="#">تكنولوجيا</a>
+              <h3 class="card__title"><a href="#">نمو ملحوظ في تمويل الشركات الناشئة</a></h3>
+            </div>
+          </article>
+        </aside>
+      </section>
+
+      <!-- Main grid -->
+      <section class="main-grid container">
+        <div class="grid__content">
+          <header class="section-head">
+            <h2 class="section-title">آخر الأخبار</h2>
+            <div class="tabs" role="tablist">
+              <button class="tab is-active" role="tab" aria-selected="true" data-tab-target="#latest">الأحدث</button>
+              <button class="tab" role="tab" aria-selected="false" data-tab-target="#most">الأكثر قراءة</button>
+            </div>
+          </header>
+
+          <div id="latest" class="cards-grid tab-panel is-active" role="tabpanel">
+            <!-- 8 cards -->
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n1/600/400" alt="خبر 1"></a>
+              <div class="card__body">
+                <a class="chip" href="#">مصر</a>
+                <h3 class="card__title"><a href="#">الحكومة تُطلق منصة موحدة لتراخيص الاستثمار</a></h3>
+                <p class="card__excerpt">المنصة الجديدة تستهدف تسهيل الإجراءات للمستثمرين وتسريع الدورة المستندية.</p>
+                <div class="meta">قبل 30 دقيقة</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n2/600/400" alt="خبر 2"></a>
+              <div class="card__body">
+                <a class="chip" href="#">الأسواق</a>
+                <h3 class="card__title"><a href="#">ارتفاع جماعي لمؤشرات البورصة بقيادة الأسهم الكبرى</a></h3>
+                <p class="card__excerpt">المستثمرون يترقبون نتائج أعمال الربع الثالث لعدد من الشركات القيادية.</p>
+                <div class="meta">قبل ساعة</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n3/600/400" alt="خبر 3"></a>
+              <div class="card__body">
+                <a class="chip" href="#">اقتصاد</a>
+                <h3 class="card__title"><a href="#">تراجع عجز الميزان التجاري بدعم من نمو الصادرات</a></h3>
+                <p class="card__excerpt">قطاعات الكيماويات والدواء تسجل الأداء الأفضل على أساس سنوي.</p>
+                <div class="meta">قبل ساعتين</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n4/600/400" alt="خبر 4"></a>
+              <div class="card__body">
+                <a class="chip" href="#">شركات</a>
+                <h3 class="card__title"><a href="#">شراكة استراتيجية بين شركتين رائدتين في الاتصالات</a></h3>
+                <p class="card__excerpt">الاتفاقية تتضمن توسعاً في خدمات الجيل الخامس خلال 12 شهراً.</p>
+                <div class="meta">قبل 3 ساعات</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n5/600/400" alt="خبر 5"></a>
+              <div class="card__body">
+                <a class="chip" href="#">طاقة</a>
+                <h3 class="card__title"><a href="#">بدء التشغيل التجريبي لمحطة رياح جديدة</a></h3>
+                <p class="card__excerpt">المحطة تضيف 250 ميغاواط إلى الشبكة القومية للكهرباء.</p>
+                <div class="meta">اليوم</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n6/600/400" alt="خبر 6"></a>
+              <div class="card__body">
+                <a class="chip" href="#">تكنولوجيا</a>
+                <h3 class="card__title"><a href="#">إطلاق صندوق جديد لتمويل الابتكار</a></h3>
+                <p class="card__excerpt">يدعم الشركات الناشئة في المراحل المبكرة بتمويل مرن.</p>
+                <div class="meta">أمس</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n7/600/400" alt="خبر 7"></a>
+              <div class="card__body">
+                <a class="chip" href="#">اللوجستيات</a>
+                <h3 class="card__title"><a href="#">تحسين كفاءة الموانئ لخفض زمن الإفراج الجمركي</a></h3>
+                <p class="card__excerpt">حلول رقمية لرفع جودة الخدمات وسرعة الإجراءات.</p>
+                <div class="meta">أمس</div>
+              </div>
+            </article>
+            <article class="card card--horz">
+              <a href="#" class="card__media"><img src="https://picsum.photos/seed/n8/600/400" alt="خبر 8"></a>
+              <div class="card__body">
+                <a class="chip" href="#">رأي</a>
+                <h3 class="card__title"><a href="#">قراءة في آفاق الاقتصاد الإقليمي</a></h3>
+                <p class="card__excerpt">تحولات السياسات النقدية وأثرها على تدفقات رأس المال.</p>
+                <div class="meta">أمس</div>
+              </div>
+            </article>
+          </div>
+
+          <div id="most" class="cards-list tab-panel" role="tabpanel" hidden>
+            <a class="list-item" href="#">5 مؤشرات تعكس تغيّراً في توجهات المستثمرين</a>
+            <a class="list-item" href="#">كيف يمكن للتكنولوجيا المالية تعزيز الشمول الاقتصادي؟</a>
+            <a class="list-item" href="#">خطط توسعية لقطاع السياحة في موسم الشتاء</a>
+            <a class="list-item" href="#">الصناعة الدوائية بين تحديات التكاليف وفرص النمو</a>
+            <a class="list-item" href="#">خطاب السياسة النقدية: الرسائل الضمنية</a>
+          </div>
+
+          <div class="more">
+            <button class="btn btn--outline" id="loadMoreBtn">عرض المزيد</button>
+          </div>
+        </div>
+
+        <aside class="grid__aside">
+          <div class="widget">
+            <h3 class="widget__title">الأكثر قراءة</h3>
+            <ol class="ranked">
+              <li><a href="#">سعر النفط يقترب من حاجز 90 دولاراً للبرميل</a></li>
+              <li><a href="#">أسواق الأسهم الخليجية تغلق على ارتفاع</a></li>
+              <li><a href="#">زيادة استثمارات رأس المال الجريء</a></li>
+              <li><a href="#">تحسن التصنيف الائتماني لعدد من البنوك</a></li>
+              <li><a href="#">التحول الرقمي في الخدمات الحكومية</a></li>
+            </ol>
+          </div>
+
+          <div class="widget subscribe">
+            <h3 class="widget__title">اشترك في النشرة</h3>
+            <p>آخر الأخبار والتحليلات تصلك عبر بريدك الإلكتروني.</p>
+            <form class="subscribe__form" id="subscribeForm">
+              <input type="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+              <button type="submit" class="btn btn--primary">اشترك</button>
+              <div class="subscribe__msg" id="subscribeMsg" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Videos -->
+      <section class="videos container">
+        <header class="section-head">
+          <h2 class="section-title">فيديو</h2>
+          <div class="slider-controls">
+            <button class="icon-btn" id="videoPrev" aria-label="السابق">⟨</button>
+            <button class="icon-btn" id="videoNext" aria-label="التالي">⟩</button>
+          </div>
+        </header>
+        <div class="slider" id="videoSlider">
+          <article class="vcard">
+            <a class="vcard__thumb" href="#">
+              <img src="https://picsum.photos/seed/v1/400/250" alt="فيديو 1">
+              <span class="vcard__duration">03:24</span>
+            </a>
+            <h4 class="vcard__title"><a href="#">حوار مع خبير الأسواق حول توقعات الربع القادم</a></h4>
+          </article>
+          <article class="vcard">
+            <a class="vcard__thumb" href="#">
+              <img src="https://picsum.photos/seed/v2/400/250" alt="فيديو 2">
+              <span class="vcard__duration">07:12</span>
+            </a>
+            <h4 class="vcard__title"><a href="#">كيف تؤثر أسعار النفط على موازنات الدول؟</a></h4>
+          </article>
+          <article class="vcard">
+            <a class="vcard__thumb" href="#">
+              <img src="https://picsum.photos/seed/v3/400/250" alt="فيديو 3">
+              <span class="vcard__duration">05:01</span>
+            </a>
+            <h4 class="vcard__title"><a href="#">الشركات الناشئة: دروس من قصص نجاح محلية</a></h4>
+          </article>
+          <article class="vcard">
+            <a class="vcard__thumb" href="#">
+              <img src="https://picsum.photos/seed/v4/400/250" alt="فيديو 4">
+              <span class="vcard__duration">02:45</span>
+            </a>
+            <h4 class="vcard__title"><a href="#">الذكاء الاصطناعي في الخدمات المالية</a></h4>
+          </article>
+          <article class="vcard">
+            <a class="vcard__thumb" href="#">
+              <img src="https://picsum.photos/seed/v5/400/250" alt="فيديو 5">
+              <span class="vcard__duration">04:39</span>
+            </a>
+            <h4 class="vcard__title"><a href="#">اتجاهات الاستثمار المستدام</a></h4>
+          </article>
+        </div>
+      </section>
+
+      <!-- Markets widget -->
+      <section class="markets container">
+        <header class="section-head">
+          <h2 class="section-title">الأسواق</h2>
+        </header>
+        <div class="markets__table" role="table" aria-label="بيانات الأسواق">
+          <div class="row head" role="row">
+            <div class="cell" role="columnheader">المؤشر</div>
+            <div class="cell" role="columnheader">القيمة</div>
+            <div class="cell" role="columnheader">التغير</div>
+          </div>
+          <div class="row" role="row">
+            <div class="cell" role="cell">EGX30</div>
+            <div class="cell" role="cell">28,450</div>
+            <div class="cell up" role="cell">+0.85%</div>
+          </div>
+          <div class="row" role="row">
+            <div class="cell" role="cell">Brent</div>
+            <div class="cell" role="cell">89.12</div>
+            <div class="cell down" role="cell">-0.42%</div>
+          </div>
+          <div class="row" role="row">
+            <div class="cell" role="cell">Gold</div>
+            <div class="cell" role="cell">2310</div>
+            <div class="cell steady" role="cell">0.00%</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="#">الأعمال</a>
+          <p>نموذج واجهة أمامية لموقع إخباري اقتصادي عربي. هذا المحتوى تجريبي لأغراض التصميم فقط.</p>
+          <div class="social">
+            <a href="#" aria-label="تويتر">𝕏</a>
+            <a href="#" aria-label="فيسبوك">f</a>
+            <a href="#" aria-label="يوتيوب">▶</a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h4>الأقسام</h4>
+          <ul>
+            <li><a href="#">مصر</a></li>
+            <li><a href="#">الأسواق</a></li>
+            <li><a href="#">اقتصاد</a></li>
+            <li><a href="#">شركات</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>روابط</h4>
+          <ul>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+          </ul>
+        </div>
+        <div class="footer__cta">
+          <h4>النشرة البريدية</h4>
+          <form class="subscribe__form" id="footerSubscribeForm">
+            <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+            <button type="submit" class="btn btn--primary">اشترك</button>
+            <div class="subscribe__msg" id="footerSubscribeMsg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="container">© <span id="copyYear"></span> الأعمال - جميع الحقوق محفوظة</div>
+      </div>
+    </footer>
+
+    <!-- Search overlay -->
+    <div class="overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="بحث">
+      <div class="overlay__panel">
+        <button class="icon-btn overlay__close" id="closeSearch" aria-label="إغلاق">✕</button>
+        <form class="search-form" role="search">
+          <input type="search" placeholder="ابحث عن موضوع، شركة، سوق..." aria-label="بحث">
+          <button class="btn btn--primary" type="submit">بحث</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__head">
+          <span class="logo">الأعمال</span>
+          <button class="icon-btn" id="closeMenu" aria-label="إغلاق">✕</button>
+        </div>
+        <nav class="drawer__nav">
+          <a href="#">مصر</a>
+          <a href="#">الأسواق</a>
+          <a href="#">اقتصاد</a>
+          <a href="#">شركات</a>
+          <a href="#">طاقة</a>
+          <a href="#">تكنولوجيا</a>
+          <a href="#">رأي</a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
